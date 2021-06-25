@@ -1,6 +1,6 @@
 ﻿namespace KalculatorMicro
 {
-    partial class Form1
+    partial class FormCalc
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -95,7 +95,7 @@
             this.btnOkFirst.UseVisualStyleBackColor = true;
             this.btnOkFirst.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // FormCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -107,8 +107,8 @@
             this.Controls.Add(this.tbSum);
             this.Controls.Add(this.lblDays);
             this.Controls.Add(this.tbDays);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormCalc";
+            this.Text = "Калькулятор микрокредита";
             this.ResumeLayout(false);
             this.PerformLayout();
 

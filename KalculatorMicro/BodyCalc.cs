@@ -27,6 +27,7 @@ namespace KalculatorMicro
             double sum_viplat;
             double nakopitelno = 0;
 
+            string[] rez = new string[days];
             string[] stavka_string = stavka_all.Split(new char[] { ';' });
             double[] stavka = new double[days];
 
@@ -45,13 +46,14 @@ namespace KalculatorMicro
                     {
                         nakopitelno = nakopitelno + (sum * stavka[i - 1]);
                         sum_viplat = sum + nakopitelno;
-                        MessageBox.Show("День " + i + " Ставка " + stavka[i - 1] + " Сумма выплат " + sum_viplat);
+                        rez[i - 1] = Convert.ToString(("День " + i + " Ставка " + stavka[i - 1] + " Сумма выплат " + sum_viplat));
                         if (nakopitelno > 30000)
                         {
                             MessageBox.Show("Превышено количество дней для займа");
                         }
                         else
                         {
+                            lboxRez.Items.AddRange(rez);
                             MessageBox.Show("Общая сумма выплаты " + sum_viplat + "\n"
                                             + "Сумма процентов " + nakopitelno + "\n"
                                             + "Эффективная процентная ставка в день " + (nakopitelno / sum / days));
@@ -61,7 +63,7 @@ namespace KalculatorMicro
                     {
                         nakopitelno = nakopitelno + (sum * stavka[i - 1]);
                         sum_viplat = sum + nakopitelno;
-                        MessageBox.Show("День " + i + " Ставка " + stavka[i - 1] + " Сумма выплат " + sum_viplat);
+                        rez[i - 1] = Convert.ToString(("День " + i + " Ставка " + stavka[i - 1] + " Сумма выплат " + sum_viplat));
                     }
                 }
             }

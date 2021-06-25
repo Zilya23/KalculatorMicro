@@ -35,6 +35,7 @@
             this.lblProcent = new System.Windows.Forms.Label();
             this.tbProcent = new System.Windows.Forms.TextBox();
             this.btnOkFirst = new System.Windows.Forms.Button();
+            this.lboxRez = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // tbDays
@@ -95,11 +96,20 @@
             this.btnOkFirst.UseVisualStyleBackColor = true;
             this.btnOkFirst.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lboxRez
+            // 
+            this.lboxRez.FormattingEnabled = true;
+            this.lboxRez.Location = new System.Drawing.Point(45, 281);
+            this.lboxRez.Name = "lboxRez";
+            this.lboxRez.Size = new System.Drawing.Size(315, 290);
+            this.lboxRez.TabIndex = 7;
+            // 
             // FormCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 274);
+            this.ClientSize = new System.Drawing.Size(440, 594);
+            this.Controls.Add(this.lboxRez);
             this.Controls.Add(this.btnOkFirst);
             this.Controls.Add(this.lblProcent);
             this.Controls.Add(this.tbProcent);
@@ -123,6 +133,7 @@
         private System.Windows.Forms.Label lblProcent;
         private System.Windows.Forms.TextBox tbProcent;
         private System.Windows.Forms.Button btnOkFirst;
+        private System.Windows.Forms.ListBox lboxRez;
     }
 }
 

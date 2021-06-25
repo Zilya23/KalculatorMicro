@@ -35,6 +35,11 @@ namespace KalculatorMicro
             foreach (string s in stavka_string)
             {
                 stavka[val] = Convert.ToDouble(s);
+                if(stavka[val] >= 1)
+                {
+                    MessageBox.Show("Превышен максимальный процент");
+                    Application.Exit();
+                }
                 val++;
             }
 
@@ -50,6 +55,7 @@ namespace KalculatorMicro
                         if (nakopitelno > 30000)
                         {
                             MessageBox.Show("Превышено количество дней для займа");
+                            Application.Exit();
                         }
                         else
                         {

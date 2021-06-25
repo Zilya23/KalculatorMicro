@@ -21,9 +21,19 @@ namespace KalculatorMicro
         {
             int days = Convert.ToInt32(tbDays.Text);
             double sum = Convert.ToDouble(tbSum.Text);
+            string stavka_all = tbProcent.Text;
             double sum_viplat;
-            double stavka;
             double nakopitelno = 0;
+
+            string[] stavka_string = stavka_all.Split(new char[] { ';' });
+            double[] stavka = new double[days];
+
+            int val = 0;
+            foreach (string s in stavka_string)
+            {
+                stavka[val] = Convert.ToDouble(s);
+                val++;
+            }
 
             if ((days < 366) & (sum < 500001))
             {
@@ -31,7 +41,6 @@ namespace KalculatorMicro
                 {
                     if (i == days)
                     {
-                        stavka = Convert.ToDouble(tbProcent.Text);
                         nakopitelno = nakopitelno + (sum * stavka);
                         sum_viplat = sum + nakopitelno;
                         MessageBox.Show("День " + i + " Ставка " + stavka + " Сумма выплат " + sum_viplat);

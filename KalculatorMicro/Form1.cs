@@ -19,8 +19,8 @@ namespace KalculatorMicro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int days = Convert.ToInt32(tbDays);
-            double sum = Convert.ToDouble(tbSum);
+            int days = Convert.ToInt32(tbDays.Text);
+            double sum = Convert.ToDouble(tbSum.Text);
             double sum_viplat;
             double stavka;
             double nakopitelno = 0;
@@ -31,30 +31,33 @@ namespace KalculatorMicro
                 {
                     if (i == days)
                     {
-                        stavka = Convert.ToDouble(Console.ReadLine());
+                        stavka = Convert.ToDouble(tbProcent.Text);
                         nakopitelno = nakopitelno + (sum * stavka);
                         sum_viplat = sum + nakopitelno;
+                        MessageBox.Show("День " + i + " Ставка " + stavka + " Сумма выплат " + sum_viplat);
                         if (nakopitelno > 30000)
                         {
                             MessageBox.Show("Превышено количество дней для займа");
                         }
                         else
                         {
-                            MessageBox.Show("День " + i + " Ставка " + stavka + " Сумма выплат " + sum_viplat + "\n"
-                                            + "Общая сумма выплаты " + sum_viplat + "\n"
+                            MessageBox.Show("Общая сумма выплаты " + sum_viplat + "\n"
                                             + "Сумма процентов " + nakopitelno + "\n"
                                             + "Эффективная процентная ставка в день " + (nakopitelno / sum / days));
                         }
                     }
-                    stavka = Convert.ToDouble(Console.ReadLine());
-                    nakopitelno = nakopitelno + (sum * stavka);
-                    sum_viplat = sum + nakopitelno;
-                    MessageBox.Show("День " + i + " Ставка " + stavka + " Сумма выплат " + sum_viplat);
+                    else
+                    {
+                        stavka = Convert.ToDouble(tbProcent.Text);
+                        nakopitelno = nakopitelno + (sum * stavka);
+                        sum_viplat = sum + nakopitelno;
+                        MessageBox.Show("День " + i + " Ставка " + stavka + " Сумма выплат " + sum_viplat);
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("Превышено количество дней для займа");
+                MessageBox.Show("Превышено количество дней для займа или максимальная сумма");
             }
         }
     }

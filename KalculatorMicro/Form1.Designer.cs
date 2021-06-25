@@ -34,7 +34,7 @@
             this.tbSum = new System.Windows.Forms.TextBox();
             this.lblProcent = new System.Windows.Forms.Label();
             this.tbProcent = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOkFirst = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbDays
@@ -72,7 +72,7 @@
             // lblProcent
             // 
             this.lblProcent.AutoSize = true;
-            this.lblProcent.Location = new System.Drawing.Point(42, 241);
+            this.lblProcent.Location = new System.Drawing.Point(42, 145);
             this.lblProcent.Name = "lblProcent";
             this.lblProcent.Size = new System.Drawing.Size(44, 13);
             this.lblProcent.TabIndex = 5;
@@ -80,27 +80,27 @@
             // 
             // tbProcent
             // 
-            this.tbProcent.Location = new System.Drawing.Point(131, 242);
+            this.tbProcent.Location = new System.Drawing.Point(131, 146);
             this.tbProcent.Name = "tbProcent";
             this.tbProcent.Size = new System.Drawing.Size(208, 20);
             this.tbProcent.TabIndex = 4;
             // 
-            // button1
+            // btnOkFirst
             // 
-            this.button1.Location = new System.Drawing.Point(184, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 51);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Ok";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnOkFirst.Location = new System.Drawing.Point(194, 198);
+            this.btnOkFirst.Name = "btnOkFirst";
+            this.btnOkFirst.Size = new System.Drawing.Size(75, 51);
+            this.btnOkFirst.TabIndex = 6;
+            this.btnOkFirst.Text = "Ok";
+            this.btnOkFirst.UseVisualStyleBackColor = true;
+            this.btnOkFirst.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 326);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(457, 284);
+            this.Controls.Add(this.btnOkFirst);
             this.Controls.Add(this.lblProcent);
             this.Controls.Add(this.tbProcent);
             this.Controls.Add(this.lblSum);
@@ -122,7 +122,7 @@
         private System.Windows.Forms.TextBox tbSum;
         private System.Windows.Forms.Label lblProcent;
         private System.Windows.Forms.TextBox tbProcent;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOkFirst;
     }
 }
 

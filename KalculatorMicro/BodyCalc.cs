@@ -78,5 +78,20 @@ namespace KalculatorMicro
                 MessageBox.Show("Превышено количество дней для займа или максимальная сумма");
             }
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            const string sPath = "save1.txt";
+
+            System.IO.StreamWriter SaveFile = new System.IO.StreamWriter(sPath);
+            foreach (var item in lboxRez.Items)
+            {
+                SaveFile.WriteLine(item);
+            }
+
+            SaveFile.Close();
+
+            MessageBox.Show("Programs saved!");
+        }
     }
 }

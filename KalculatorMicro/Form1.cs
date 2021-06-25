@@ -41,9 +41,9 @@ namespace KalculatorMicro
                 {
                     if (i == days)
                     {
-                        nakopitelno = nakopitelno + (sum * stavka);
+                        nakopitelno = nakopitelno + (sum * stavka[i - 1]);
                         sum_viplat = sum + nakopitelno;
-                        MessageBox.Show("День " + i + " Ставка " + stavka + " Сумма выплат " + sum_viplat);
+                        MessageBox.Show("День " + i + " Ставка " + stavka[i - 1] + " Сумма выплат " + sum_viplat);
                         if (nakopitelno > 30000)
                         {
                             MessageBox.Show("Превышено количество дней для займа");
@@ -57,10 +57,9 @@ namespace KalculatorMicro
                     }
                     else
                     {
-                        stavka = Convert.ToDouble(tbProcent.Text);
-                        nakopitelno = nakopitelno + (sum * stavka);
+                        nakopitelno = nakopitelno + (sum * stavka[i - 1]);
                         sum_viplat = sum + nakopitelno;
-                        MessageBox.Show("День " + i + " Ставка " + stavka + " Сумма выплат " + sum_viplat);
+                        MessageBox.Show("День " + i + " Ставка " + stavka[i - 1] + " Сумма выплат " + sum_viplat);
                     }
                 }
             }
